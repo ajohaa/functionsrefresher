@@ -127,17 +127,42 @@ document.getElementById('btnDoubleNum').addEventListener('click', doubleNumber)
 */
 
 function changeTitle() {
-
+    const titlesArray = [ "Welcome to my page!", "Hello, world!", "JavaScript is fun!", "Have a great day!", "Enjoy coding!", "Mr. Kilgore is the goat" ];
+    const randomIndex = Math.floor(Math.random() * titlesArray.length);
+    const newTitle = titlesArray[randomIndex];
+    document.title = newTitle;
+    titleElement = document.getElementById("page-title");
+    titleElement.textContent = newTitle;
 }
 
 function changeTextColor() {
-
+   //   2) Each time you press the button, the output text color cycles through a few choices (red, green, orange, etc, fall themed)
+    const outputElement = document.getElementById("out");
+    const textColors = ["#FF4500", "#FF8C00", "#FFD700", "#8B4513", "#A0522D"];
+    const currentColor = outputElement.style.color;
+    let nextIndex = textColors.indexOf(currentColor) + 1;
+    if (nextIndex >= textColors.length) {
+        nextIndex = 0;
+    }
+    outputElement.style.color = textColors[nextIndex];
 }
 
 function randomBackground() {
-
+    //   3) Press the button to change the background color of the output box to a random color.
+    const outputElement = document.getElementById("out");
+    const bgColors = ["#FF7F50", "#FF6347", "#FF4500", "#FFA500", "#FFD700", "#8B4513", "#A0522D"];
+    const randomIndex = Math.floor(Math.random() * bgColors.length);
+    const randomColor = bgColors[randomIndex];
+    outputElement.style.backgroundColor = randomColor;
 }
 
 function doubleNumber() {
-
+    //   4) Ask the user for a number and display that number doubled.
+    const userInput = prompt("Please enter a number:");
+    const number = parseFloat(userInput);
+    if (!isNaN(number)) {
+        render(`<p>The double of ${number} is ${number * 2}.</p>`);
+    } else {
+        render(`<p class="text-muted">Invalid input. Please enter a valid number.</p>`);
+    }
 }

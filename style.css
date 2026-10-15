@@ -68,3 +68,31 @@ main {
   color: #fff;
 }
 #btnClear:hover { background-color: #991b1b; }
+
+#btnTitle {
+  background-color: #f97316;
+  border-color: #c2410c;
+  color: #fff;
+}
+#btnTitle:hover { background-color: #c2410c; }
+
+#btnText {
+  background-color: #f59e0b;
+  border-color: #b45309;
+  color: #fff;
+}
+#btnText:hover { background-color: #b45309; }
+
+#btnBackground {
+  background-color: #facc15;
+  border-color: #b45309;
+  color: #fff;
+}
+#btnBackground:hover { background-color: #b45309; }
+
+#btnDoubleNum {
+  background-color: #f97316;
+  border-color: #c2410c;
+  color: #fff;
+}
+#btnDoubleNum:hover { background-color: #c2410c; }
